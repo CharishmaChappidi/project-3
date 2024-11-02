@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Legends Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #28a745;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        #home {
+            padding: 20px;
+            min-height: 400px;
+            position: relative;
+            background-color: white;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0);
+            z-index: 1;
+        }
+
+        #home h2, #home p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .featured-players {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .player-card {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: white;
+            text-align: center;
+            width: 150px;
+        }
+
+        .player-profile {
+            border: 1px solid #ddd;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: white;
+        }
+
+        .match-highlight {
+            margin: 20px 0;
+        }
+
+        #map {
+            width: 100%;
+            height: 400px;
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #28a745;
+            color: white;
+        }
+
+        #fan-story-form {
+            margin: 20px 0;
+        }
+
+        #stories-display {
+            margin-top: 20px;
+        }
+
+        .player-voting {
+            margin-top: 20px;
+        }
+
+        .vote-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: white;
+            padding: 15px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        select, button {
+            margin-top: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cricket Legends Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#players">Players</a></li>
+                <li><a href="#top-matches">Top Matches</a></li>
+                <li><a href="#map">Map</a></li>
+                <li><a href="#fan-zone">Fan Zone</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <div class="overlay"></div>
+            <h2>Welcome to Cricket Legends Hub!</h2>
+            <p>Cricket is a thrilling sport that combines skill, strategy, and passion, captivating fans across the globe.</p>
+            <p>Explore the extraordinary players who have left a mark on the sport.</p>
+            <div class="featured-players">
+                <div class="player-card">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/57.png" alt="MS Dhoni" width="75">
+                    <h4>MS Dhoni</h4>
+                </div>
+                <div class="player-card">
+                    <img src="https://www.royalchallengers.com/PRRCB01/public/styles/1061x767_landscape/public/2020-07/Sachin%20Tendulkar.jpg?h=920929c4&itok=Is5LHMDi" alt="Sachin Tendulkar" width="98">
+                    <h4>Sachin Tendulkar</h4>
+                </div>
+                <div class="player-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxKKSA33LSVJuGY_jL_zG2wvYNbTao0zn5nw&s" alt="AB de Villiers" width="70">
+                    <h4>AB de Villiers</h4>
+                </div>
+                <div class="player-card">
+                    <img src="https://www.mpl.live/blog/wp-content/uploads/2024/06/CHRIS-GAYLE.png.webp" alt="Chris Gayle" width="117">
+                    <h4>Chris Gayle</h4>
+                </div>
+                <div class="player-card">
+                    <img src="https://ichef.bbci.co.uk/ace/standard/2048/cpsprodpb/b3fe/live/1ba87550-75b5-11ef-85d0-83a5bb291f55.jpg" alt="Ricky Ponting" width="105">
+                    <h4>Ricky Ponting</h4>
+                </div>
+                <div class="player-card">
+                    <img src="https://www.hindustantimes.com/ht-img/img/2023/11/15/1600x900/PTI11-15-2023-000197B-0_1700069179817_1700069215148.jpg" alt="Vivian Richards" width="100">
+                    <h4>Vivian Richards</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Players Section -->
+        <section id="players">
+            <h3>Player Profiles</h3>
+            <div class="player-profile">
+                <img src="https://fantasykhiladi.com/wp-content/uploads/2024/03/MS-Dhoni-4.webp" alt="MS Dhoni" width="100">
+                <h4>MS Dhoni</h4>
+                <p>Runs: 10773 | Matches: 350</p>
+                <p>Achievements: World Cup Winner 2007, 2011, Champions Trophy Winner 2013</p>
+            </div>
+            <div class="player-profile">
+                <img src="https://northeastlive.s3.amazonaws.com/media/uploads/2024/04/Representational-image-2024-04-24T113914.150.png" alt="Sachin Tendulkar" width="100">
+                <h4>Sachin Tendulkar</h4>
+                <p>Runs: 18426 | Matches: 463</p>
+                <p>Achievements: World Cup Winner 2011, 100 International Centuries</p>
+            </div>
+            <div class="player-profile">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxKKSA33LSVJuGY_jL_zG2wvYNbTao0zn5nw&s" alt="AB de Villiers" width="100">
+                <h4>AB de Villiers</h4>
+                <p>Runs: 8765 | Matches: 228</p>
+                <p>Achievements: World Cup Semi-Finalist 2015</p>
+            </div>
+            <div class="player-profile">
+                <img src="https://www.mpl.live/blog/wp-content/uploads/2024/06/CHRIS-GAYLE.png.webp" alt="Chris Gayle" width="100">
+                <h4>Chris Gayle</h4>
+                <p>Runs: 10480 | Matches: 301</p>
+                <p>Achievements: World T20 Champion 2012, 2016</p>
+            </div>
+            <div class="player-profile">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-sVUaELv09Y43KlgTFKeKJhY6eHz_LDwvTA&s" alt="Ricky Ponting" width="100">
+                <h4>Ricky Ponting</h4>
+                <p>Runs: 27483 | Matches: 560</p>
+                <p>Achievements: World Cup Winner 1999, 2003, 2007</p>
+            </div>
+            <div class="player-profile">
+                <img src="https://www.hindustantimes.com/ht-img/img/2023/11/15/1600x900/PTI11-15-2023-000197B-0_1700069179817_1700069215148.jpg" alt="Vivian Richards" width="100">
+                <h4>Vivian Richards</h4>
+                <p>Runs: 6721 | Matches: 121</p>
+                <p>Achievements: World Cup Winner 1975, 1979</p>
+            </div>
+        </section>
+
+        <!-- Top Matches Section -->
+        <section id="top-matches">
+            <h3>Top Matches</h3>
+            <div class="match-highlight">
+                <h4>INDIA VS AUSTRALIA T20 FINAL 2013</h4>
+                <iframe src="https://www.youtube.com/embed/KEsd9OQEp64?si=peQJgbEU9UsbuV6e" width="300" height="200" allowfullscreen></iframe>
+                <h4>INDIA VS NEW ZEALAND FINAL 2013 MATCH</h4>
+                <iframe src="https://www.youtube.com/embed/d0HMwnWo_UY?si=41Klm3xjlgBpxuzR" width="300" height="200" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Player Comparison Section -->
+        <h3>Player Comparison</h3>
+        <div>
+            <label for="player1">Select Player 1:</label>
+            <select id="player1">
+                <option value=""></option>
+                <option value="MS Dhoni">MS Dhoni</option>
+                <option value="Sachin Tendulkar">Sachin Tendulkar</option>
+                <option value="AB de Villiers">AB de Villiers</option>
+                <option value="Chris Gayle">Chris Gayle</option>
+                <option value="Ricky Ponting">Ricky Ponting</option>
+                <option value="Vivian Richards">Vivian Richards</option>
+            </select>
+
+            <label for="player2">Select Player 2:</label>
+            <select id="player2">
+                <option value=""></option>
+                <option value="MS Dhoni">MS Dhoni</option>
+                <option value="Sachin Tendulkar">Sachin Tendulkar</option>
+                <option value="AB de Villiers">AB de Villiers</option>
+                <option value="Chris Gayle">Chris Gayle</option>
+                <option value="Ricky Ponting">Ricky Ponting</option>
+                <option value="Vivian Richards">Vivian Richards</option>
+            </select>
+
+            <button onclick="comparePlayers()">Compare</button>
+        </div>
+
+        <div class="player-comparison" id="comparisonResult"></div>
+
+        <!-- Fan Zone Section -->
+        <section id="fan-zone">
+            <h3>Fan Zone</h3>
+            <form id="fan-story-form">
+                <label for="player-name">Favorite Player:</label>
+                <input type="text" id="player-name" required>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="stories-display"></div>
+
+            <div class="player-voting">
+                <h4>Vote for the Greatest Player of All Time</h4>
+                <div class="vote-card">
+                    <label for="vote-player">Select Player:</label>
+                    <select id="vote-player">
+                        <option value=""></option>
+                        <option value="MS Dhoni">MS Dhoni</option>
+                        <option value="Sachin Tendulkar">Sachin Tendulkar</option>
+                        <option value="AB de Villiers">AB de Villiers</option>
+                        <option value="Chris Gayle">Chris Gayle</option>
+                        <option value="Ricky Ponting">Ricky Ponting</option>
+                        <option value="Vivian Richards">Vivian Richards</option>
+                    </select>
+                    <button onclick="submitVote()">Vote</button>
+                </div>
+                <div id="vote-result"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cricket Legends Hub</p>
+    </footer>
+
+    <script>
+        const playerStats = {
+            "MS Dhoni": { runs: 10773, matches: 350, achievements: "World Cup Winner 2007, 2011" },
+            "Sachin Tendulkar": { runs: 18426, matches: 463, achievements: "World Cup Winner 2011, 100 International Centuries" },
+            "AB de Villiers": { runs: 8765, matches: 228, achievements: "World Cup Semi-Finalist 2015" },
+            "Chris Gayle": { runs: 10480, matches: 301, achievements: "World T20 Champion 2012, 2016" },
+            "Ricky Ponting": { runs: 27483, matches: 560, achievements: "World Cup Winner 1999, 2003, 2007" },
+            "Vivian Richards": { runs: 6721, matches: 121, achievements: "World Cup Winner 1975, 1979" }
+        };
+
+        const votes = {
+            "MS Dhoni": 0,
+            "Sachin Tendulkar": 0,
+            "AB de Villiers": 0,
+            "Chris Gayle": 0,
+            "Ricky Ponting": 0,
+            "Vivian Richards": 0
+        };
+
+        function comparePlayers() {
+            const player1 = document.getElementById("player1").value;
+            const player2 = document.getElementById("player2").value;
+
+            const resultDiv = document.getElementById("comparisonResult");
+            resultDiv.innerHTML = '';
+
+            if (player1 === player2) {
+                resultDiv.innerHTML = "<p>Please select different players for comparison.</p>";
+                return;
+            }
+            const player1Stats = playerStats[player1];
+            const player2Stats = playerStats[player2];
+
+            const player1Card = `
+                <div class="comparison-card">
+                    <h3>${player1}</h3>
+                    <p>Runs: ${player1Stats.runs}</p>
+                    <p>Matches: ${player1Stats.matches}</p>
+                    <p>Achievements: ${player1Stats.achievements}</p>
+                </div>
+            `;
+
+            const player2Card = `
+                <div class="comparison-card">
+                    <h3>${player2}</h3>
+                    <p>Runs: ${player2Stats.runs}</p>
+                    <p>Matches: ${player2Stats.matches}</p>
+                    <p>Achievements: ${player2Stats.achievements}</p>
+                </div>
+            `;
+
+            resultDiv.innerHTML = player1Card + player2Card;
+        }
+
+        // Handle Fan Story Submission
+        document.getElementById("fan-story-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const playerName = document.getElementById("player-name").value;
+            const story = document.getElementById("fan-story").value;
+            const storiesDisplay = document.getElementById("stories-display");
+            storiesDisplay.innerHTML += `<p><strong>${playerName}</strong>: ${story}</p>`;
+            this.reset();
+        });
+
+        // Handle Voting Submission
+        function submitVote() {
+            const selectedPlayer = document.getElementById("vote-player").value;
+            if (selectedPlayer) {
+                votes[selectedPlayer]++;
+                displayVoteResult();
+            } else {
+                alert("Please select a player to vote.");
+            }
+        }
+
+        function displayVoteResult() {
+            const resultDiv = document.getElementById("vote-result");
+            resultDiv.innerHTML = "<h4>Vote Results:</h4>";
+            for (const player in votes) {
+                resultDiv.innerHTML += `<p>${player}: ${votes[player]} votes</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
